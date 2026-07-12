@@ -1557,6 +1557,9 @@ textarea.form-control {
   .vf-bl { bottom: 15px; left: 15px; }
   .vf-br { bottom: 15px; right: 15px; }
   .vf-corner { width: 15px; height: 15px; }
+  .vf-top-info, .vf-bottom-info {
+    display: none;
+  }
 }
 
 /* -------------------------------------------------------------
@@ -1754,6 +1757,22 @@ body.light-mode .uganda-border {
   }
   .map-details {
     min-height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-grid {
+    padding: 16px;
+    gap: 20px;
+    border-radius: 16px;
+  }
+  .map-vector-container {
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .map-details {
+    padding: 20px;
+    border-radius: 12px;
   }
 }
 

@@ -839,6 +839,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3D Parallax Tilt Effect with Glare
   // -------------------------------------------------------------
   function init3DTiltCards() {
+    // Disable tilt behavior on touchscreens to prevent drag/scroll lag
+    if (!window.matchMedia('(hover: hover)').matches) return;
+
     const cards = document.querySelectorAll('.service-card');
     cards.forEach(card => {
       const glare = document.createElement('div');
@@ -877,8 +880,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.02,
+      rootMargin: '0px 0px -20px 0px'
     });
 
     reveals.forEach(el => observer.observe(el));
