@@ -255,11 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Setup random Hero background
+  // Setup random Hero background with dynamic cross-fade slideshow
   function setupHeroBackground() {
     if (!heroBg || state.images.length === 0) return;
     
-    // Choose landscape or TV Production images
+    // Choose landscape, TV Production, or Documentary images
     const heroPool = state.images.filter(img => 
       img.categories.includes('Landscapes') || 
       img.categories.includes('TV Production') || 
@@ -267,11 +267,52 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     const pool = heroPool.length > 0 ? heroPool : state.images;
-    const randomImage = pool[Math.floor(Math.random() * pool.length)];
     
-    const largeUrl = randomImage.paths.large || randomImage.paths.medium;
-    heroBg.style.backgroundImage = `url("${largeUrl}")`;
+    // Initial display
+    let currentHeroIdx = Math.floor(Math.random() * pool.length);
+    const firstImg = pool[currentHeroIdx];
+    const firstUrl = firstImg.paths.large || firstImg.paths.medium;
+    
+    heroBg.style.backgroundImage = `url("${firstUrl}")`;
     heroBg.style.opacity = '1';
+
+    if (pool.length <= 1) return;
+
+    // Create the second background layer dynamically for cross-fading
+    const bg1 = heroBg;
+    const bg2 = document.createElement('div');
+    bg2.className = 'hero-bg hero-bg-parallax';
+    bg2.id = 'hero-bg-2';
+    bg2.style.opacity = '0';
+    
+    // Insert bg2 right after bg1 in the DOM
+    bg1.parentNode.insertBefore(bg2, bg1.nextSibling);
+
+    let activeBg = 1;
+
+    // Interval to cycle images with cross-fade
+    setInterval(() => {
+      currentHeroIdx = (currentHeroIdx + 1) % pool.length;
+      const nextImg = pool[currentHeroIdx];
+      const nextUrl = nextImg.paths.large || nextImg.paths.medium;
+
+      // Preload image before starting the transition to prevent blank flashes
+      const imgPreloader = new Image();
+      imgPreloader.onload = () => {
+        if (activeBg === 1) {
+          bg2.style.backgroundImage = `url("${nextUrl}")`;
+          bg1.style.opacity = '0';
+          bg2.style.opacity = '1';
+          activeBg = 2;
+        } else {
+          bg1.style.backgroundImage = `url("${nextUrl}")`;
+          bg2.style.opacity = '0';
+          bg1.style.opacity = '1';
+          activeBg = 1;
+        }
+      };
+      imgPreloader.src = nextUrl;
+    }, 6000); // Transitions every 6 seconds
   }
 
   // Setup About image
