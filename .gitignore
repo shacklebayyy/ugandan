@@ -1,0 +1,11 @@
+# Ignore heavy zip backups
+Website fotos.zip
+
+# System metadata
+.DS_Store
+__MACOSX/
+._*
+
+# Python caches
+__pycache__/
+*.py[cod]

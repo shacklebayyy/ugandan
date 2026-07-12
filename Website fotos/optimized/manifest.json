@@ -1,0 +1,556 @@
+[
+  {
+    "filename": "20180619_100820.jpg",
+    "aspectRatio": 1.333,
+    "avgColor": "rgb(103, 98, 81)",
+    "categories": [
+      "Documentary"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 4032,
+    "height": 3024,
+    "paths": {
+      "small": "./Website fotos/optimized/small/20180619_100820.jpg",
+      "medium": "./Website fotos/optimized/medium/20180619_100820.jpg",
+      "large": "./Website fotos/optimized/large/20180619_100820.jpg"
+    }
+  },
+  {
+    "filename": "Catering.JPG",
+    "aspectRatio": 1.5,
+    "avgColor": "rgb(118, 121, 93)",
+    "categories": [
+      "Behind the Scenes",
+      "TV Production",
+      "Services"
+    ],
+    "alt": "Catering services on-location for film crews in Uganda",
+    "width": 5472,
+    "height": 3648,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Catering.jpg",
+      "medium": "./Website fotos/optimized/medium/Catering.jpg",
+      "large": "./Website fotos/optimized/large/Catering.jpg"
+    }
+  },
+  {
+    "filename": "Crew NP 5.JPG",
+    "aspectRatio": 1.333,
+    "avgColor": "rgb(171, 149, 126)",
+    "categories": [
+      "Behind the Scenes",
+      "TV Production"
+    ],
+    "alt": "Professional Ugandan production crew working on set",
+    "width": 4608,
+    "height": 3456,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Crew NP 5.jpg",
+      "medium": "./Website fotos/optimized/medium/Crew NP 5.jpg",
+      "large": "./Website fotos/optimized/large/Crew NP 5.jpg"
+    }
+  },
+  {
+    "filename": "Crew NP.JPG",
+    "aspectRatio": 1.5,
+    "avgColor": "rgb(171, 147, 131)",
+    "categories": [
+      "Behind the Scenes",
+      "TV Production"
+    ],
+    "alt": "Professional Ugandan production crew working on set",
+    "width": 4608,
+    "height": 3072,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Crew NP.jpg",
+      "medium": "./Website fotos/optimized/medium/Crew NP.jpg",
+      "large": "./Website fotos/optimized/large/Crew NP.jpg"
+    }
+  },
+  {
+    "filename": "Crew NP2.JPG",
+    "aspectRatio": 1.5,
+    "avgColor": "rgb(164, 142, 126)",
+    "categories": [
+      "Behind the Scenes",
+      "TV Production"
+    ],
+    "alt": "Professional Ugandan production crew working on set",
+    "width": 4608,
+    "height": 3072,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Crew NP2.jpg",
+      "medium": "./Website fotos/optimized/medium/Crew NP2.jpg",
+      "large": "./Website fotos/optimized/large/Crew NP2.jpg"
+    }
+  },
+  {
+    "filename": "Crew Security NP.JPG",
+    "aspectRatio": 1.333,
+    "avgColor": "rgb(159, 134, 112)",
+    "categories": [
+      "Behind the Scenes",
+      "TV Production",
+      "Services"
+    ],
+    "alt": "Armed and local security services for film shoots in Uganda",
+    "width": 4608,
+    "height": 3456,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Crew Security NP.jpg",
+      "medium": "./Website fotos/optimized/medium/Crew Security NP.jpg",
+      "large": "./Website fotos/optimized/large/Crew Security NP.jpg"
+    }
+  },
+  {
+    "filename": "Crew TV Globo 2.JPG",
+    "aspectRatio": 1.5,
+    "avgColor": "rgb(148, 146, 126)",
+    "categories": [
+      "TV Production",
+      "Behind the Scenes",
+      "TV Production"
+    ],
+    "alt": "Brazilian TV Globo crew filming on location in Uganda",
+    "width": 4608,
+    "height": 3072,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Crew TV Globo 2.jpg",
+      "medium": "./Website fotos/optimized/medium/Crew TV Globo 2.jpg",
+      "large": "./Website fotos/optimized/large/Crew TV Globo 2.jpg"
+    }
+  },
+  {
+    "filename": "Crew TV Globo.JPG",
+    "aspectRatio": 1.5,
+    "avgColor": "rgb(142, 147, 124)",
+    "categories": [
+      "TV Production",
+      "Behind the Scenes",
+      "TV Production"
+    ],
+    "alt": "Brazilian TV Globo crew filming on location in Uganda",
+    "width": 4608,
+    "height": 3072,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Crew TV Globo.jpg",
+      "medium": "./Website fotos/optimized/medium/Crew TV Globo.jpg",
+      "large": "./Website fotos/optimized/large/Crew TV Globo.jpg"
+    }
+  },
+  {
+    "filename": "Crew on the street.JPG",
+    "aspectRatio": 1.333,
+    "avgColor": "rgb(110, 112, 118)",
+    "categories": [
+      "Cities",
+      "Behind the Scenes",
+      "TV Production",
+      "Documentary"
+    ],
+    "alt": "Behind the scenes of TV production crew filming on Kampala streets",
+    "width": 4608,
+    "height": 3456,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Crew on the street.jpg",
+      "medium": "./Website fotos/optimized/medium/Crew on the street.jpg",
+      "large": "./Website fotos/optimized/large/Crew on the street.jpg"
+    }
+  },
+  {
+    "filename": "Crew shoot Caviar.jpg",
+    "aspectRatio": 0.6,
+    "avgColor": "rgb(127, 98, 73)",
+    "categories": [
+      "Commercial",
+      "Behind the Scenes",
+      "TV Production"
+    ],
+    "alt": "Production crew shoot on set with Caviar London",
+    "width": 2160,
+    "height": 3600,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Crew shoot Caviar.jpg",
+      "medium": "./Website fotos/optimized/medium/Crew shoot Caviar.jpg",
+      "large": "./Website fotos/optimized/large/Crew shoot Caviar.jpg"
+    }
+  },
+  {
+    "filename": "Crew trekking Rhinos.JPG",
+    "aspectRatio": 1.5,
+    "avgColor": "rgb(141, 136, 129)",
+    "categories": [
+      "Wildlife",
+      "Behind the Scenes",
+      "TV Production",
+      "Documentary"
+    ],
+    "alt": "Filming rhinos in Uganda's wildlife sanctuaries",
+    "width": 4608,
+    "height": 3072,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Crew trekking Rhinos.jpg",
+      "medium": "./Website fotos/optimized/medium/Crew trekking Rhinos.jpg",
+      "large": "./Website fotos/optimized/large/Crew trekking Rhinos.jpg"
+    }
+  },
+  {
+    "filename": "DSCN7228.jpg",
+    "aspectRatio": 1.5,
+    "avgColor": "rgb(82, 88, 77)",
+    "categories": [
+      "Culture"
+    ],
+    "alt": "Local Ugandan community welcoming film crew with cultural dances",
+    "width": 4608,
+    "height": 3072,
+    "paths": {
+      "small": "./Website fotos/optimized/small/DSCN7228.jpg",
+      "medium": "./Website fotos/optimized/medium/DSCN7228.jpg",
+      "large": "./Website fotos/optimized/large/DSCN7228.jpg"
+    }
+  },
+  {
+    "filename": "DSCN7588.jpg",
+    "aspectRatio": 1.5,
+    "avgColor": "rgb(99, 101, 83)",
+    "categories": [
+      "Culture"
+    ],
+    "alt": "Local Ugandan community welcoming film crew with cultural dances",
+    "width": 4608,
+    "height": 3072,
+    "paths": {
+      "small": "./Website fotos/optimized/small/DSCN7588.jpg",
+      "medium": "./Website fotos/optimized/medium/DSCN7588.jpg",
+      "large": "./Website fotos/optimized/large/DSCN7588.jpg"
+    }
+  },
+  {
+    "filename": "DSCN7735.jpg",
+    "aspectRatio": 1.333,
+    "avgColor": "rgb(142, 118, 92)",
+    "categories": [
+      "Culture",
+      "Documentary"
+    ],
+    "alt": "Local Ugandan community welcoming film crew with cultural dances",
+    "width": 4608,
+    "height": 3456,
+    "paths": {
+      "small": "./Website fotos/optimized/small/DSCN7735.jpg",
+      "medium": "./Website fotos/optimized/medium/DSCN7735.jpg",
+      "large": "./Website fotos/optimized/large/DSCN7735.jpg"
+    }
+  },
+  {
+    "filename": "DSC_6663.jpg",
+    "aspectRatio": 1.51,
+    "avgColor": "rgb(90, 49, 40)",
+    "categories": [
+      "Landscapes"
+    ],
+    "alt": "Stunning landscape sunset over the hills of Uganda",
+    "width": 4928,
+    "height": 3264,
+    "paths": {
+      "small": "./Website fotos/optimized/small/DSC_6663.jpg",
+      "medium": "./Website fotos/optimized/medium/DSC_6663.jpg",
+      "large": "./Website fotos/optimized/large/DSC_6663.jpg"
+    }
+  },
+  {
+    "filename": "Hoima5.jpg",
+    "aspectRatio": 1.501,
+    "avgColor": "rgb(156, 144, 123)",
+    "categories": [
+      "Landscapes"
+    ],
+    "alt": "Lush landscapes and rolling hills in Hoima, Uganda",
+    "width": 1280,
+    "height": 853,
+    "paths": {
+      "small": "./Website fotos/optimized/small/Hoima5.jpg",
+      "medium": "./Website fotos/optimized/medium/Hoima5.jpg",
+      "large": "./Website fotos/optimized/large/Hoima5.jpg"
+    }
+  },
+  {
+    "filename": "IMG_0074.jpg",
+    "aspectRatio": 1.502,
+    "avgColor": "rgb(137, 134, 125)",
+    "categories": [
+      "Cities"
+    ],
+    "alt": "Traffic and street life in Kampala city, Uganda",
+    "width": 3088,
+    "height": 2056,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_0074.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_0074.jpg",
+      "large": "./Website fotos/optimized/large/IMG_0074.jpg"
+    }
+  },
+  {
+    "filename": "IMG_0361.jpg",
+    "aspectRatio": 1.502,
+    "avgColor": "rgb(139, 121, 100)",
+    "categories": [
+      "Cities"
+    ],
+    "alt": "Bustling local market scene in Kampala city",
+    "width": 3088,
+    "height": 2056,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_0361.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_0361.jpg",
+      "large": "./Website fotos/optimized/large/IMG_0361.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20160613_074619.jpg",
+    "aspectRatio": 1.667,
+    "avgColor": "rgb(121, 100, 82)",
+    "categories": [
+      "Landscapes"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 3600,
+    "height": 2160,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20160613_074619.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20160613_074619.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20160613_074619.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20160614_111128.jpg",
+    "aspectRatio": 0.6,
+    "avgColor": "rgb(86, 70, 46)",
+    "categories": [
+      "Landscapes"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 2160,
+    "height": 3600,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20160614_111128.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20160614_111128.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20160614_111128.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20170317_120920.jpg",
+    "aspectRatio": 1.667,
+    "avgColor": "rgb(128, 102, 78)",
+    "categories": [
+      "Drone"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 3600,
+    "height": 2160,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20170317_120920.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20170317_120920.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20170317_120920.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20180314_093357.jpg",
+    "aspectRatio": 0.6,
+    "avgColor": "rgb(117, 117, 110)",
+    "categories": [
+      "Drone"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 2160,
+    "height": 3600,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20180314_093357.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20180314_093357.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20180314_093357.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20180314_162650.jpg",
+    "aspectRatio": 1.667,
+    "avgColor": "rgb(110, 112, 91)",
+    "categories": [
+      "Drone"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 3600,
+    "height": 2160,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20180314_162650.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20180314_162650.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20180314_162650.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20180321_101743.jpg",
+    "aspectRatio": 0.6,
+    "avgColor": "rgb(121, 120, 88)",
+    "categories": [
+      "Drone"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 2160,
+    "height": 3600,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20180321_101743.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20180321_101743.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20180321_101743.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20180423_103640.jpg",
+    "aspectRatio": 1.667,
+    "avgColor": "rgb(124, 108, 65)",
+    "categories": [
+      "Landscapes"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 3600,
+    "height": 2160,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20180423_103640.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20180423_103640.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20180423_103640.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20180423_105435.jpg",
+    "aspectRatio": 1.667,
+    "avgColor": "rgb(129, 136, 59)",
+    "categories": [
+      "Landscapes"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 3600,
+    "height": 2160,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20180423_105435.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20180423_105435.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20180423_105435.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20180426_110658.jpg",
+    "aspectRatio": 1.667,
+    "avgColor": "rgb(89, 90, 109)",
+    "categories": [
+      "Landscapes"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 3600,
+    "height": 2160,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20180426_110658.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20180426_110658.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20180426_110658.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20180426_143034.jpg",
+    "aspectRatio": 0.6,
+    "avgColor": "rgb(70, 65, 66)",
+    "categories": [
+      "Landscapes"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 2160,
+    "height": 3600,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20180426_143034.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20180426_143034.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20180426_143034.jpg"
+    }
+  },
+  {
+    "filename": "IMG_20180427_090117.jpg",
+    "aspectRatio": 0.6,
+    "avgColor": "rgb(105, 97, 69)",
+    "categories": [
+      "Landscapes"
+    ],
+    "alt": "Uganda film production location and support photos",
+    "width": 2160,
+    "height": 3600,
+    "paths": {
+      "small": "./Website fotos/optimized/small/IMG_20180427_090117.jpg",
+      "medium": "./Website fotos/optimized/medium/IMG_20180427_090117.jpg",
+      "large": "./Website fotos/optimized/large/IMG_20180427_090117.jpg"
+    }
+  },
+  {
+    "filename": "casting.JPG",
+    "aspectRatio": 0.75,
+    "avgColor": "rgb(124, 139, 145)",
+    "categories": [
+      "Behind the Scenes",
+      "TV Production",
+      "Services"
+    ],
+    "alt": "Casting local actors and talent for production in Uganda",
+    "width": 3456,
+    "height": 4608,
+    "paths": {
+      "small": "./Website fotos/optimized/small/casting.jpg",
+      "medium": "./Website fotos/optimized/medium/casting.jpg",
+      "large": "./Website fotos/optimized/large/casting.jpg"
+    }
+  },
+  {
+    "filename": "crew briefing.jpg",
+    "aspectRatio": 1.667,
+    "avgColor": "rgb(178, 160, 147)",
+    "categories": [
+      "Behind the Scenes",
+      "TV Production"
+    ],
+    "alt": "Film crew briefing session before shooting a scene",
+    "width": 3600,
+    "height": 2160,
+    "paths": {
+      "small": "./Website fotos/optimized/small/crew briefing.jpg",
+      "medium": "./Website fotos/optimized/medium/crew briefing.jpg",
+      "large": "./Website fotos/optimized/large/crew briefing.jpg"
+    }
+  },
+  {
+    "filename": "crew.jpg",
+    "aspectRatio": 1.667,
+    "avgColor": "rgb(121, 93, 71)",
+    "categories": [
+      "Behind the Scenes",
+      "TV Production"
+    ],
+    "alt": "Professional Ugandan production crew working on set",
+    "width": 3600,
+    "height": 2160,
+    "paths": {
+      "small": "./Website fotos/optimized/small/crew.jpg",
+      "medium": "./Website fotos/optimized/medium/crew.jpg",
+      "large": "./Website fotos/optimized/large/crew.jpg"
+    }
+  },
+  {
+    "filename": "driver.jpg",
+    "aspectRatio": 1.667,
+    "avgColor": "rgb(138, 125, 105)",
+    "categories": [
+      "Behind the Scenes",
+      "TV Production",
+      "Services"
+    ],
+    "alt": "Professional driver and 4x4 transport vehicle for filming in Uganda",
+    "width": 3600,
+    "height": 2160,
+    "paths": {
+      "small": "./Website fotos/optimized/small/driver.jpg",
+      "medium": "./Website fotos/optimized/medium/driver.jpg",
+      "large": "./Website fotos/optimized/large/driver.jpg"
+    }
+  }
+]
