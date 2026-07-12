@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
   const themeToggleIcon = document.getElementById('theme-toggle-icon');
 
-  // Theme Setup (Dark Mode Default, Toggleable)
-  const currentTheme = localStorage.getItem('theme') || 'dark';
+  // Theme Setup (Light Mode Default, Toggleable)
+  const currentTheme = localStorage.getItem('theme') || 'light';
   if (currentTheme === 'light') {
     document.body.classList.add('light-mode');
     if (themeToggleIcon) themeToggleIcon.className = 'bi bi-sun';
