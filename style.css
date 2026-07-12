@@ -203,6 +203,7 @@ section {
   z-index: 1000;
   padding: 20px 0;
   transition: var(--transition-smooth);
+  color: var(--text-main);
 }
 
 .header:not(.scrolled) {
@@ -340,6 +341,7 @@ section {
   --text-main: #f5f5f7;
   --text-muted: #9ba0a6;
   --border-color: rgba(255, 255, 255, 0.15);
+  color: var(--text-main);
 }
 
 .hero-bg {
