@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       initInteractiveMap();
       init3DTiltCards();
       initScrollReveals();
+      initScrollToTop();
 
     } catch (error) {
       console.error('Failed to initialize website content:', error);
@@ -885,5 +886,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     reveals.forEach(el => observer.observe(el));
+  }
+
+  // -------------------------------------------------------------
+  // Scroll to Top Handler
+  // -------------------------------------------------------------
+  function initScrollToTop() {
+    const scrollTopBtn = document.getElementById('scroll-to-top');
+    if (!scrollTopBtn) return;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('active');
+      } else {
+        scrollTopBtn.classList.remove('active');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   }
 });

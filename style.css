@@ -279,6 +279,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.02em;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
 }
 
 .logo-text span {
@@ -1348,6 +1349,10 @@ textarea.form-control {
   .hero h1 {
     font-size: 3rem;
   }
+  
+  .logo-text {
+    font-size: 1.35rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1383,8 +1388,30 @@ textarea.form-control {
     column-count: 2;
   }
   
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .hero h2 {
+    font-size: 0.95rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+  }
+
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 span {
+    font-size: 1.15rem;
+    margin-top: 8px;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
   }
   
   .hero-btns {
@@ -1814,4 +1841,49 @@ body.light-mode .uganda-border {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------------------------------------
+   Scroll to Top Button
+------------------------------------------------------------- */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  background: var(--accent-gold);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(10px);
+}
+
+.scroll-to-top.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background: #ffffff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
 }
