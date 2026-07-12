@@ -1041,6 +1041,40 @@ section {
   color: var(--accent-gold);
 }
 
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.25);
+}
+
+.btn-call {
+  background: var(--bg-secondary);
+  color: var(--accent-gold);
+  border: 1px solid var(--border-color);
+}
+
+.btn-call:hover {
+  background: var(--accent-gold);
+  color: #000;
+  border-color: var(--accent-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(var(--accent-gold-rgb), 0.2);
+}
+
 .contact-form {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
