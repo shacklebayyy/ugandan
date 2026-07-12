@@ -55,6 +55,29 @@
     <div class="hero-bg hero-bg-parallax" id="hero-bg"></div>
     <div class="hero-overlay"></div>
     
+    <!-- Cinematic Viewfinder Overlay -->
+    <div class="viewfinder">
+      <div class="vf-corner vf-tl"></div>
+      <div class="vf-corner vf-tr"></div>
+      <div class="vf-corner vf-bl"></div>
+      <div class="vf-corner vf-br"></div>
+      
+      <div class="vf-top-info">
+        <div class="vf-rec"><span class="rec-dot"></span>REC</div>
+        <div class="vf-fps"><span class="vf-status-dot"></span>24 FPS</div>
+      </div>
+      
+      <div class="vf-center-grid">
+        <div class="vf-crosshair"></div>
+      </div>
+      
+      <div class="vf-bottom-info">
+        <div class="vf-res">4K UHD</div>
+        <div class="vf-timecode" id="vf-timecode">00:00:00:00</div>
+        <div class="vf-battery"><i class="bi bi-battery-full"></i> 100%</div>
+      </div>
+    </div>
+    
     <div class="container">
       <h2>We'll help you tell your story!</h2>
       <h1>Let's Talk About Films<span>Professional Production & Location Support in Uganda</span></h1>
@@ -79,7 +102,7 @@
 
   <main>
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about reveal">
       <div class="container">
         <div class="about-grid">
           <div class="about-content">
@@ -128,7 +151,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services reveal">
       <div class="container">
         <div class="section-header">
           <h2>Our <span>Services</span></h2>
@@ -144,9 +167,77 @@
     <!-- Portfolio Gallery Section -->
     <section id="portfolio" class="portfolio">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2>Locations & <span>Production Gallery</span></h2>
           <p>Explore some of the amazing locations, diverse cultures, and behind-the-scenes moments from our previous shoots in Uganda.</p>
+        </div>
+
+        <!-- Interactive Filming Map -->
+        <div class="map-section reveal">
+          <div class="map-grid">
+            <div class="map-vector-container">
+              <svg viewBox="0 0 500 500" class="uganda-svg-map" id="uganda-map">
+                <!-- Uganda Border Shape -->
+                <path class="uganda-border" d="M 230 40 L 290 35 L 340 70 L 390 100 L 410 140 L 430 190 L 400 240 L 410 290 L 370 340 L 350 410 L 310 430 L 270 430 L 220 450 L 170 450 L 130 420 L 90 410 L 80 340 L 100 290 L 70 240 L 100 190 L 120 120 L 140 80 L 180 60 Z" />
+                <!-- Lake Victoria -->
+                <path class="lake-victoria" d="M 330 350 Q 360 350 370 370 Q 370 400 340 410 Q 290 400 300 380 Q 310 350 330 350 Z" />
+                
+                <!-- Hotspots -->
+                <g class="map-hotspot" data-location="murchison">
+                  <circle cx="180" cy="150" r="14" class="hotspot-pulse" />
+                  <circle cx="180" cy="150" r="5" class="hotspot-core" />
+                  <text x="180" y="130" class="hotspot-label">Murchison Falls</text>
+                </g>
+                
+                <g class="map-hotspot" data-location="queen-elizabeth">
+                  <circle cx="120" cy="350" r="14" class="hotspot-pulse" />
+                  <circle cx="120" cy="350" r="5" class="hotspot-core" />
+                  <text x="120" y="330" class="hotspot-label">Queen Elizabeth NP</text>
+                </g>
+                
+                <g class="map-hotspot" data-location="kampala">
+                  <circle cx="280" cy="330" r="14" class="hotspot-pulse" />
+                  <circle cx="280" cy="330" r="5" class="hotspot-core" />
+                  <text x="280" y="310" class="hotspot-label">Kampala City</text>
+                </g>
+                
+                <g class="map-hotspot" data-location="jinja">
+                  <circle cx="325" cy="315" r="14" class="hotspot-pulse" />
+                  <circle cx="325" cy="315" r="5" class="hotspot-core" />
+                  <text x="325" y="295" class="hotspot-label">Jinja (Nile)</text>
+                </g>
+                
+                <g class="map-hotspot" data-location="kibale">
+                  <circle cx="150" cy="280" r="14" class="hotspot-pulse" />
+                  <circle cx="150" cy="280" r="5" class="hotspot-core" />
+                  <text x="150" y="260" class="hotspot-label">Kibale Forest</text>
+                </g>
+                
+                <g class="map-hotspot" data-location="hoima">
+                  <circle cx="170" cy="220" r="14" class="hotspot-pulse" />
+                  <circle cx="170" cy="220" r="5" class="hotspot-core" />
+                  <text x="170" y="200" class="hotspot-label">Hoima Region</text>
+                </g>
+              </svg>
+            </div>
+            
+            <div class="map-details" id="map-details-card">
+              <div class="map-details-placeholder">
+                <i class="bi bi-info-circle"></i>
+                <p>Hover over any pulsating hotspot on the map to explore filming locations and past production highlights.</p>
+              </div>
+              <div class="map-details-content" style="display: none;">
+                <div class="map-details-img-wrapper">
+                  <img id="map-details-img" src="" alt="Location preview">
+                </div>
+                <div class="map-details-text">
+                  <h3 id="map-details-title">Location Name</h3>
+                  <p id="map-details-desc">Location description details...</p>
+                  <span class="map-details-tag" id="map-details-tag">Category</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Category Filters -->
@@ -162,7 +253,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials reveal">
       <div class="container">
         <div class="section-header">
           <h2>International Client <span>Reviews</span></h2>
@@ -200,7 +291,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact reveal">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-info-container">

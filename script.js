@@ -154,6 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // 7. Load Testimonials and Companies
       loadTestimonialsAndCompanies();
 
+      // 8. Initialize Premium Interactive Features
+      initViewfinderTimecode();
+      initInteractiveMap();
+      init3DTiltCards();
+      initScrollReveals();
+
     } catch (error) {
       console.error('Failed to initialize website content:', error);
     }
@@ -693,5 +699,188 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     ];
+  }
+
+  // -------------------------------------------------------------
+  // Viewfinder Timecode Simulation
+  // -------------------------------------------------------------
+  function initViewfinderTimecode() {
+    const timecodeElem = document.getElementById('vf-timecode');
+    if (!timecodeElem) return;
+
+    let frames = 0;
+    let seconds = 0;
+    let minutes = 0;
+    let hours = 0;
+
+    let lastTime = 0;
+    const interval = 1000 / 24; // 24 FPS
+
+    function animateTimecode(time) {
+      if (!lastTime) lastTime = time;
+      const elapsed = time - lastTime;
+
+      if (elapsed >= interval) {
+        lastTime = time - (elapsed % interval);
+        
+        frames++;
+        if (frames >= 24) {
+          frames = 0;
+          seconds++;
+          if (seconds >= 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes >= 60) {
+              minutes = 0;
+              hours++;
+              if (hours >= 24) hours = 0;
+            }
+          }
+        }
+
+        const h = String(hours).padStart(2, '0');
+        const m = String(minutes).padStart(2, '0');
+        const s = String(seconds).padStart(2, '0');
+        const f = String(frames).padStart(2, '0');
+        timecodeElem.textContent = `${h}:${m}:${s}:${f}`;
+      }
+      requestAnimationFrame(animateTimecode);
+    }
+    requestAnimationFrame(animateTimecode);
+  }
+
+  // -------------------------------------------------------------
+  // Interactive Uganda Location Map
+  // -------------------------------------------------------------
+  const locationData = {
+    'murchison': {
+      title: 'Murchison Falls National Park',
+      desc: 'Where the Nile River squeezes through an 8-meter canyon to drop 43 meters. Celebrated for high-action wildlife shoots, big game herds, Nile riverboat tracking, and scenic drone capture.',
+      category: 'Wildlife & Landscapes',
+      keyword: 'elephant'
+    },
+    'queen-elizabeth': {
+      title: 'Queen Elizabeth National Park',
+      desc: 'Classic Savannah grasslands, volcanic crater lakes, and the Kazinga Channel channel boat safaris. Famous tree-climbing lions and vast bio-diversity. A critical location for wildlife films.',
+      category: 'Wildlife',
+      keyword: 'lion'
+    },
+    'kampala': {
+      title: 'Kampala City',
+      desc: 'Bustling markets, street activities, heavy traffic, and modern hubs. Ideal for documentary features, casting workshops, lifestyle commercials, and urban production coordination.',
+      category: 'Cities & Culture',
+      keyword: 'street'
+    },
+    'jinja': {
+      title: 'Jinja (Source of the Nile)',
+      desc: 'Adventure central of East Africa. White water rapids, forest backdrops, and historic colonial bridges over the Nile. Excellent for cinematic sports, travel, and action themes.',
+      category: 'Landscapes',
+      keyword: 'river'
+    },
+    'kibale': {
+      title: 'Kibale National Forest',
+      desc: 'A dense primary rainforest with a chimpanzee population of over 1,500. Ideal for forest wildlife expeditions, canopy photography, and specialized macro nature filming.',
+      category: 'Wildlife',
+      keyword: 'chimp'
+    },
+    'hoima': {
+      title: 'Hoima Region',
+      desc: 'Rolling countryside, oil development infrastructure, and local farms. Ideal for energy development documentaries, social narratives, and diverse agricultural backdrops.',
+      category: 'Landscapes',
+      keyword: 'hoima'
+    }
+  };
+
+  function initInteractiveMap() {
+    const hotspots = document.querySelectorAll('.map-hotspot');
+    const card = document.getElementById('map-details-card');
+    if (!card) return;
+    
+    const placeholder = card.querySelector('.map-details-placeholder');
+    const content = card.querySelector('.map-details-content');
+    const imgElem = document.getElementById('map-details-img');
+    const titleElem = document.getElementById('map-details-title');
+    const descElem = document.getElementById('map-details-desc');
+    const tagElem = document.getElementById('map-details-tag');
+
+    hotspots.forEach(hotspot => {
+      hotspot.addEventListener('mouseenter', () => {
+        const locKey = hotspot.getAttribute('data-location');
+        const data = locationData[locKey];
+        if (!data) return;
+
+        // Search for matching image in manifest
+        let matchedImage = state.images.find(img => img.filename.toLowerCase().includes(data.keyword));
+        if (!matchedImage) {
+          // fallback to matching categories
+          matchedImage = state.images.find(img => img.categories.includes('Wildlife') || img.categories.includes('Landscapes'));
+        }
+        
+        const imgUrl = matchedImage ? (matchedImage.paths.medium || matchedImage.paths.small) : '';
+        
+        titleElem.textContent = data.title;
+        descElem.textContent = data.desc;
+        tagElem.textContent = data.category;
+        
+        if (imgUrl) {
+          imgElem.src = imgUrl;
+          imgElem.parentNode.style.display = 'block';
+        } else {
+          imgElem.parentNode.style.display = 'none';
+        }
+
+        placeholder.style.display = 'none';
+        content.style.display = 'flex';
+      });
+    });
+  }
+
+  // -------------------------------------------------------------
+  // 3D Parallax Tilt Effect with Glare
+  // -------------------------------------------------------------
+  function init3DTiltCards() {
+    const cards = document.querySelectorAll('.service-card');
+    cards.forEach(card => {
+      const glare = document.createElement('div');
+      glare.className = 'card-glare';
+      card.appendChild(glare);
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Scale tilt factor to keep subtle rotation bounds
+        const rotX = ((rect.height / 2 - y) / (rect.height / 2)) * 6;
+        const rotY = ((x - rect.width / 2) / (rect.width / 2)) * 6;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02, 1.02, 1.02)`;
+        glare.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.12) 0%, transparent 80%)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+      });
+    });
+  }
+
+  // -------------------------------------------------------------
+  // Scroll Reveal System
+  // -------------------------------------------------------------
+  function initScrollReveals() {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    reveals.forEach(el => observer.observe(el));
   }
 });
