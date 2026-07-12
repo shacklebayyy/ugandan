@@ -804,34 +804,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const descElem = document.getElementById('map-details-desc');
     const tagElem = document.getElementById('map-details-tag');
 
+    function showLocationDetails(hotspot) {
+      const locKey = hotspot.getAttribute('data-location');
+      const data = locationData[locKey];
+      if (!data) return;
+
+      // Remove active classes and set the current hotspot to active
+      hotspots.forEach(h => h.classList.remove('active'));
+      hotspot.classList.add('active');
+
+      // Search for matching image in manifest
+      let matchedImage = state.images.find(img => img.filename.toLowerCase().includes(data.keyword));
+      if (!matchedImage) {
+        matchedImage = state.images.find(img => img.categories.includes('Wildlife') || img.categories.includes('Landscapes'));
+      }
+      
+      const imgUrl = matchedImage ? (matchedImage.paths.medium || matchedImage.paths.small) : '';
+      
+      titleElem.textContent = data.title;
+      descElem.textContent = data.desc;
+      tagElem.textContent = data.category;
+      
+      if (imgUrl) {
+        imgElem.src = imgUrl;
+        imgElem.parentNode.style.display = 'block';
+      } else {
+        imgElem.parentNode.style.display = 'none';
+      }
+
+      placeholder.style.display = 'none';
+      content.style.display = 'flex';
+    }
+
     hotspots.forEach(hotspot => {
+      // Desktop Hover
       hotspot.addEventListener('mouseenter', () => {
-        const locKey = hotspot.getAttribute('data-location');
-        const data = locationData[locKey];
-        if (!data) return;
+        showLocationDetails(hotspot);
+      });
 
-        // Search for matching image in manifest
-        let matchedImage = state.images.find(img => img.filename.toLowerCase().includes(data.keyword));
-        if (!matchedImage) {
-          // fallback to matching categories
-          matchedImage = state.images.find(img => img.categories.includes('Wildlife') || img.categories.includes('Landscapes'));
+      // Mobile Tap & Click Action
+      hotspot.addEventListener('click', () => {
+        showLocationDetails(hotspot);
+        
+        // Scroll smoothly to details card on small screen heights so info is visible
+        if (window.innerWidth <= 992) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
-        
-        const imgUrl = matchedImage ? (matchedImage.paths.medium || matchedImage.paths.small) : '';
-        
-        titleElem.textContent = data.title;
-        descElem.textContent = data.desc;
-        tagElem.textContent = data.category;
-        
-        if (imgUrl) {
-          imgElem.src = imgUrl;
-          imgElem.parentNode.style.display = 'block';
-        } else {
-          imgElem.parentNode.style.display = 'none';
-        }
-
-        placeholder.style.display = 'none';
-        content.style.display = 'flex';
       });
     });
   }
