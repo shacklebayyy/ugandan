@@ -676,10 +676,159 @@ document.addEventListener('DOMContentLoaded', () => {
     const companyList = [...state.companies, ...state.companies]; // Duplicate to make infinite marquee seamless
     
     marqueeContent.innerHTML = companyList.map(comp => `
-      <span class="client-logo">${comp}</span>
+      <div class="client-logo-wrapper">${getCompanyLogoSVG(comp)}</div>
     `).join('');
     
     companyMarquee.appendChild(marqueeContent);
+  }
+
+  // -------------------------------------------------------------
+  // Stylized Vector Brand Logo Generator (Monochromatic SVGs)
+  // -------------------------------------------------------------
+  function getCompanyLogoSVG(company) {
+    const comp = company.toLowerCase();
+    
+    // 1. Discovery Channel
+    if (comp.includes('discovery')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 160 40" width="135" height="35">
+          <circle cx="18" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M 8 20 A 11 7 0 0 0 28 20" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M 18 9 A 7 11 0 0 0 18 31" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="36" y="25" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" letter-spacing="0.1em" fill="currentColor">Discovery</text>
+        </svg>
+      `;
+    }
+    
+    // 2. ARTE (France / Germany)
+    if (comp.includes('arte')) {
+      const lang = comp.includes('france') ? 'France' : 'Germany';
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 120 40" width="105" height="35">
+          <text x="10" y="26" font-family="Georgia, serif" font-size="20" font-weight="800" font-style="italic" fill="currentColor" letter-spacing="-0.02em">arte</text>
+          <text x="56" y="24" font-family="'Inter', sans-serif" font-size="9" font-weight="500" letter-spacing="0.05em" opacity="0.6" fill="currentColor">${lang}</text>
+        </svg>
+      `;
+    }
+    
+    // 3. NHK Japan
+    if (comp.includes('nhk')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 120 40" width="100" height="35">
+          <rect x="5" y="8" width="22" height="22" rx="4" fill="currentColor"/>
+          <text x="16" y="24" font-family="'Inter', sans-serif" font-size="15" font-weight="900" text-anchor="middle" fill="var(--bg-secondary)">N</text>
+          <rect x="32" y="8" width="22" height="22" rx="4" fill="currentColor"/>
+          <text x="43" y="24" font-family="'Inter', sans-serif" font-size="15" font-weight="900" text-anchor="middle" fill="var(--bg-secondary)">H</text>
+          <rect x="59" y="8" width="22" height="22" rx="4" fill="currentColor"/>
+          <text x="70" y="24" font-family="'Inter', sans-serif" font-size="15" font-weight="900" text-anchor="middle" fill="var(--bg-secondary)">K</text>
+          <text x="88" y="22" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="currentColor" opacity="0.6">Japan</text>
+        </svg>
+      `;
+    }
+
+    // 4. World Bank
+    if (comp.includes('world bank')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 160 40" width="135" height="35">
+          <circle cx="16" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="21" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <text x="38" y="24" font-family="'Outfit', sans-serif" font-size="12" font-weight="800" letter-spacing="0.05em" fill="currentColor">WORLD BANK</text>
+        </svg>
+      `;
+    }
+
+    // 5. GIZ
+    if (comp.includes('giz')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 80 40" width="65" height="35">
+          <rect x="5" y="6" width="70" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="40" y="25" font-family="'Inter', sans-serif" font-size="16" font-weight="900" text-anchor="middle" letter-spacing="0.05em" fill="currentColor">giz</text>
+        </svg>
+      `;
+    }
+
+    // 6. Barclays Africa
+    if (comp.includes('barclays')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 160 40" width="135" height="35">
+          <path d="M12,12 L18,8 L24,12 L22,20 L18,24 L14,20 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M18,8 L18,24" stroke="currentColor" stroke-width="1.5"/>
+          <text x="34" y="25" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="currentColor">BARCLAYS</text>
+        </svg>
+      `;
+    }
+
+    // 7. Time Magazine
+    if (comp.includes('time')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 90 40" width="75" height="35">
+          <text x="10" y="28" font-family="Georgia, serif" font-size="24" font-weight="900" fill="#E50914" letter-spacing="0.05em">TIME</text>
+        </svg>
+      `;
+    }
+
+    // 8. Caviar London
+    if (comp.includes('caviar')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 140 40" width="115" height="35">
+          <text x="5" y="26" font-family="Georgia, serif" font-size="17" font-weight="700" letter-spacing="0.05em" fill="currentColor">CAVIAR</text>
+          <text x="86" y="24" font-family="'Inter', sans-serif" font-size="8" font-weight="600" opacity="0.6" fill="currentColor">LONDON</text>
+        </svg>
+      `;
+    }
+
+    // 9. TV Globo Brazil
+    if (comp.includes('globo')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 130 40" width="110" height="35">
+          <rect x="5" y="7" width="34" height="26" rx="8" fill="currentColor"/>
+          <circle cx="22" cy="20" r="9" fill="var(--bg-secondary)"/>
+          <rect x="16" y="14" width="12" height="12" rx="4" fill="currentColor"/>
+          <text x="46" y="25" font-family="'Outfit', sans-serif" font-size="15" font-weight="700" fill="currentColor">globo</text>
+        </svg>
+      `;
+    }
+
+    // 10. Lonely Leap NYC
+    if (comp.includes('lonely leap')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 140 40" width="115" height="35">
+          <path d="M8,25 Q 18,12 28,25" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="18" cy="12" r="3" fill="currentColor"/>
+          <text x="36" y="25" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" letter-spacing="0.05em" fill="currentColor">LonelyLeap</text>
+        </svg>
+      `;
+    }
+
+    // 11. Barcroft Productions
+    if (comp.includes('barcroft')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 160 40" width="130" height="35">
+          <text x="5" y="25" font-family="'Inter', sans-serif" font-size="14" font-weight="800" letter-spacing="0.02em" fill="currentColor">Barcroft</text>
+          <text x="76" y="24" font-family="'Inter', sans-serif" font-size="8" font-weight="600" opacity="0.6" fill="currentColor">STUDIOS</text>
+        </svg>
+      `;
+    }
+
+    // 12. Bombay Elephants
+    if (comp.includes('bombay')) {
+      return `
+        <svg class="brand-logo-svg" viewBox="0 0 180 40" width="150" height="35">
+          <path d="M12,24 C12,18 16,14 22,14 C28,14 30,18 30,24 M12,24 L30,24" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="18" cy="18" r="1.5" fill="currentColor"/>
+          <text x="36" y="25" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" letter-spacing="0.05em" fill="currentColor">BOMBAY ELEPHANTS</text>
+        </svg>
+      `;
+    }
+
+    // Fallback: Geometric Typographic Logo
+    return `
+      <svg class="brand-logo-svg" viewBox="0 0 160 40" width="130" height="35">
+        <rect x="2" y="6" width="22" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="13" y="24" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle" fill="currentColor">${company.substring(0, 1)}</text>
+        <text x="32" y="25" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" letter-spacing="0.05em" fill="currentColor">${company.toUpperCase()}</text>
+      </svg>
+    `;
   }
 
   // Fallback placeholder manifest generator in case photos folder is completely empty

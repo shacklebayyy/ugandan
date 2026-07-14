@@ -957,21 +957,25 @@ section {
   animation: scrollMarquee 30s linear infinite;
 }
 
-.client-logo {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
+.client-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-muted);
-  white-space: nowrap;
-  letter-spacing: 0.05em;
-  opacity: 0.6;
+  opacity: 0.55;
   transition: var(--transition-smooth);
   cursor: default;
 }
 
-.client-logo:hover {
+.client-logo-wrapper:hover {
   opacity: 1;
   color: var(--accent-gold);
+}
+
+.brand-logo-svg {
+  height: 32px;
+  width: auto;
+  display: block;
 }
 
 /* Contact Section */
