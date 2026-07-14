@@ -16,24 +16,6 @@
     }
   },
   {
-    "filename": "Catering.JPG",
-    "aspectRatio": 1.5,
-    "avgColor": "rgb(118, 121, 93)",
-    "categories": [
-      "Behind the Scenes",
-      "TV Production",
-      "Services"
-    ],
-    "alt": "Catering services on-location for film crews in Uganda",
-    "width": 5472,
-    "height": 3648,
-    "paths": {
-      "small": "./Website fotos/optimized/small/Catering.jpg",
-      "medium": "./Website fotos/optimized/medium/Catering.jpg",
-      "large": "./Website fotos/optimized/large/Catering.jpg"
-    }
-  },
-  {
     "filename": "Crew NP 5.JPG",
     "aspectRatio": 1.333,
     "avgColor": "rgb(171, 149, 126)",
