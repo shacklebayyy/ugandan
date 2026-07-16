@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Define Services data
   const servicesData = [
+    { id: 'stringer', title: 'News Stringer & Local Producer', icon: 'bi-broadcast', desc: 'As a local producer and stringer in Uganda, we support news outlets, broadcasters, and documentary teams with on-ground filming, research, and rapid-turnaround coverage.', imgKeywords: ['street', 'briefing'] },
     { id: 'accommodation', title: 'Accommodation', icon: 'bi-house-heart', desc: 'We can get the best deals with various hotels and lodges in Uganda, tailored to production budgets.', imgKeywords: ['catering', 'crew'] },
     { id: 'cast', title: 'Cast', icon: 'bi-people', desc: 'We source experienced Casting Directors and organize call outs, video castings, talent negotiations, interpreters, and translators.', imgKeywords: ['casting'] },
     { id: 'catering', title: 'Catering', icon: 'bi-egg-fried', desc: 'We manage catering needs, whether it is meals in the bush over several weeks or studio shoots.', imgKeywords: ['catering'] },
@@ -168,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Image category helper for dynamic folder scan
   function determineCategoriesFromFilename(filename) {
-    const name = filename.lower();
+    const name = filename.toLowerCase();
     const cats = [];
     if (['rhino', 'lion', 'elephant', 'chimp', 'giraffe'].some(k => name.includes(k))) cats.push('Wildlife');
     if (['drone', 'img_20170317', 'img_20180314', 'img_20180321'].some(k => name.includes(k))) cats.push('Drone');
